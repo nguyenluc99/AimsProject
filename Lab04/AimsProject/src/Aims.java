@@ -36,6 +36,7 @@ public class Aims {
         dvd4.setLength(200);
         order2.addDigitalVideoDisc(dvd4);
 
+        // order2.test();
         order2.printOrder();
         // System.exit();
     }

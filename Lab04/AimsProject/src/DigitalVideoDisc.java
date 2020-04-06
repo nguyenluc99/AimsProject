@@ -47,4 +47,9 @@ public class DigitalVideoDisc{
         this.title = title;
     }
 
+    public boolean search (String title) {
+        if (this.getTitle().toLowerCase().indexOf(title.toLowerCase()) != -1) return true;
+        return false; 
+    }
+
 }
