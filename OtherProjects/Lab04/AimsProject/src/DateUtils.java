@@ -24,7 +24,7 @@ public class DateUtils{
         return 0;
     }
     public MyDate[] SortDate(MyDate[] dateArray) {
-        int i, j, tmpDay, tmpMonth, tmpYear;
+        int i, j;
         int len = dateArray.length;
         MyDate date1, date2;
         for (i = 0; i < len; i++) { // 0 ... j ... i ... n

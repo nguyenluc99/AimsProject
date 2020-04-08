@@ -1,3 +1,4 @@
+// import java.util.Date;
 public class MyDate {
     public static final String[] dayStr = new String[] { "first", "second", "third", "forth", "fifth", "sixth",
             "seventh", "righth", "nineth", "tenth", "eleventh", "twelveth", "thirdteenth", "forthteenth", "fifteenth",
@@ -99,17 +100,21 @@ public class MyDate {
             System.out.println("Wrong format");
             return;
         }
-        if (dayPos < index1) {
+        // dd/mm/yyyy = 0, 1, 2
+        // System.out.println(index1 + " " + index2);
+        // System.out.print(index1 + " " + index2 + " " + monthPos + " " + dayPos + " "
+        // + yearPos); // correct
+        if (dayPos < index1) { // 5 < 4
             dayLen = index1;
             order[0] = 0;
-        } else if (dayPos < index2) {
+        } else if (dayPos < index2) { // 5 < 6 , correct
             dayLen = index2 - index1 - 1;
             order[1] = 0;
         } else {
             dayLen = form.length() - index2 - 1;
             order[2] = 0;
         }
-
+        ///////////
         if (monthPos < index1) {
             monLen = index1;
             order[0] = 1;
@@ -120,7 +125,7 @@ public class MyDate {
             monLen = form.length() - index2 - 1;
             order[2] = 1;
         }
-
+        /////////////
         if (yearPos < index1) {
             yearLen = index1;
             order[0] = 2;
@@ -131,8 +136,9 @@ public class MyDate {
             yearLen = form.length() - index2 - 1;
             order[2] = 2;
         }
-
+        ///////////
         for (i = 0; i < 3; i++) {
+            // System.out.print(order[i]);
             if (order[i] == 0) {
                 // print day
                 if (dayLen == 2 && this.day < 10) {

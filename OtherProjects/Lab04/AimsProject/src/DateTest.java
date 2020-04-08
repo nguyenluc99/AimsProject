@@ -9,11 +9,8 @@ public class DateTest {
         MyDate date6 = new MyDate(1, "February", 1999);
         MyDate[] dateArray = new MyDate[] {date1, date2, date3, date4, date5, date6};
         String[] format = new String[] {"dd/mm/yyyy", "d:yy:m", "yy-mmm*dd", "yyyy:d/m", "mmm+yyyy\\d", "MMM d yyyy"};
-        // System.out.print("Format dd/mm/yyyy : ");
-        // date1.printWithFormat(form);
         System.out.println("Date is February, 1st 1999");
         for (int i = 0; i < dateArray.length; i++) {
-            // int i = 3; // 3, 4
            System.out.print("Print in format: " + format[i] + "\t");
            dateArray[i].printWithFormat(format[i]);
         }
