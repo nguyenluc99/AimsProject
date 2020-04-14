@@ -1,28 +1,9 @@
-public class DigitalVideoDisc {
-    private String title;
-    private String category;
+public class DigitalVideoDisc extends Media {
     private String director;
     private int length;
-    private float cost;
 
     public static void main(String[] args) {
 
-    }
-
-    public String getTitle() {
-        return this.title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getCategory() {
-        return this.category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getDirector() {
@@ -41,17 +22,8 @@ public class DigitalVideoDisc {
         this.length = length;
     }
 
-    public float getCost() {
-        return this.cost;
-    }
-
-    public void setCost(float cost) {
-        this.cost = cost;
-    }
-
-    public DigitalVideoDisc(String title) {
+    public DigitalVideoDisc() {
         super();
-        this.title = title;
     }
 
     public boolean search(String title) {
